@@ -1,0 +1,139 @@
+/* Container for the Doctor Details Page */
+.doctor-details {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.doctor-details h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 10px 15px;
+  z-index: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.search-bar input:focus {
+  border: 1px solid #007bff;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Doctor List - Scrollable */
+.doctor-list {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+
+/* Doctor Card Style with Animation */
+.doctor-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  text-align: left;
+}
+
+.doctor-card p {
+  margin: 6px 0;
+  color: #333;
+}
+
+.doctor-card p strong {
+  color: #007bff;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for Card Fade-In Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style for No Results Message */
+.no-results {
+  color: #888;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .doctor-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  .doctor-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .doctor-list {
+    max-height: 300px;
+  }
+}
